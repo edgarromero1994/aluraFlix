@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 import ReactPlayer from 'react-player';
  
 
-const VideoFavorito = ({video, marcarFavorito, desmarcarFavorito, actualizarVideo}) => {
+const VideoFavorito = ({video, marcarFavorito, desmarcarFavorito, actualizarVideo, manejarLike }) => {
   
   const [playing, setPlaying] = useState(false);
   const [currentPlayingId, setCurrentPlayingId] = useState(null); 
 
   const handleLike = () => {
-    const actualizado = { ...video, like: !video.like };
-    actualizarVideo(actualizado);
+    manejarLike(video.id);
   }
+
   const handleMarcarFavorito = () => {
     marcarFavorito(video.id);
    }
@@ -57,10 +57,10 @@ const VideoFavorito = ({video, marcarFavorito, desmarcarFavorito, actualizarVide
 
     </div>
     <div className="icon-fav-like">
-      <i
-        className={`ri-heart-${video.like ? 'fill' : 'line'} ${video.like ? 'like-true' : 'like-false'}`}
-        onClick={handleLike}
-      ></i>
+    <i
+      className={`ri-heart-${video.like ? 'fill' : 'line'} ${video.like ? 'like-true' : 'like-false'}`}
+          onClick={handleLike}
+        ></i>
       <i
         className={`ri-bookmark-${video.favorito ? 'fill' : 'line'} ${video.favorito ? 'favorito-true' : 'favorito-false'}`}
         onClick={video.favorito ? handleDesmarcarFavorito : handleMarcarFavorito}

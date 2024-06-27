@@ -3,7 +3,7 @@ import VideoFavorito from '../components/videofavorito/VideoFavorito';
 import './Favorito.css';
 import imagen_vacio from '../assets/favorito.svg';
 
-const Favorito = ({ favoritos, videos, marcarFavorito, desmarcarFavorito, actualizarVideo }) => {
+const Favorito = ({ favoritos, videos, marcarFavorito, desmarcarFavorito, actualizarVideo,  manejarLike, likes}) => {
   const videosFavoritos = videos.filter(video => favoritos.includes(video.id));
   const [favoritosVacios] = useState(videosFavoritos.length === 0);
 
@@ -22,6 +22,8 @@ const Favorito = ({ favoritos, videos, marcarFavorito, desmarcarFavorito, actual
               marcarFavorito={marcarFavorito}
               desmarcarFavorito={desmarcarFavorito}
               actualizarVideo={actualizarVideo}
+              manejarLike = { manejarLike }
+              likes = {likes}
             />
           ))}
         </div>
