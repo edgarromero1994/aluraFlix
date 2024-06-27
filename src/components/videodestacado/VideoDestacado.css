@@ -1,0 +1,48 @@
+ 
+.card-destacado {
+    text-align: start;
+    background-color:#f9f9ff;  
+    position: relative;
+    color: #fff;  
+    overflow: hidden;
+}
+
+.card-destacado img {
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.card-destacado .details {
+    padding: 5px 10px;
+}
+
+@media (max-width: 768px) {
+    .card-destacado {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-destacado {
+    max-width: 275px;
+    margin-bottom: 10px;
+  }
+
+  .card-destacado img {
+    height: 60%;
+  }
+
+  .card-destacado .details {
+    padding: 0px;
+}
+  .card-destacado  .details  h6 {
+    font-size: .8rem;
+    
+}
+.card-destacado  .details  span {
+    font-size: 0.5rem;
+}
+
+
+}

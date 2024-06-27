@@ -1,0 +1,15 @@
+.boton {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 13px 35px;
+    color: #ffffff;
+    background-color: rgb(21, 21, 100);
+    transition: 0.3s ease;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boton:hover {
+    opacity: 0.9;
+  }
