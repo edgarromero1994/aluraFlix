@@ -5,12 +5,12 @@ import "./CardVideo.css";
 const CardVideo = ({
   video,
   eliminarVideo,
-  actualizarVideo,
   abrirModalEditar,
   marcarDestacado,
   desmarcarDestacado,
   marcarFavorito,
   desmarcarFavorito,
+  manejarLike  
 }) => {
   const [playing, setPlaying] = useState(false);
   const [currentPlayingId, setCurrentPlayingId] = useState(null); 
@@ -38,8 +38,7 @@ const CardVideo = ({
   }
 
   const handleLike = () => {
-    const actualizado = { ...video, like: !video.like };
-    actualizarVideo(actualizado);
+    manejarLike(video.id);
   }
 
   const handleMarcarFavorito = () => {
@@ -102,7 +101,7 @@ const CardVideo = ({
         </div>
       </div>
       <div className="icon-fav-like">
-        <i
+      <i
           className={`ri-heart-${video.like ? 'fill' : 'line'} ${video.like ? 'like-true' : 'like-false'}`}
           onClick={handleLike}
         ></i>

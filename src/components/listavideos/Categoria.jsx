@@ -2,7 +2,7 @@ import React from 'react';
 import CardVideo from "../video/CardVideo";
 import "./ListaVideo.css";
 
-const Categoria = ({ videos, eliminarVideo, actualizarVideo, abrirModalEditar, marcarDestacado, desmarcarDestacado, destacados, favoritos, marcarFavorito, desmarcarFavorito }) => {
+const Categoria = ({ videos, eliminarVideo, actualizarVideo, abrirModalEditar, marcarDestacado, desmarcarDestacado, destacados, favoritos, marcarFavorito, desmarcarFavorito, manejarLike, likes}) => {
   const videosByCategory = videos.reduce((acc, video) => {
     if (!acc[video.categoria]) {
       acc[video.categoria] = [];
@@ -30,6 +30,8 @@ const Categoria = ({ videos, eliminarVideo, actualizarVideo, abrirModalEditar, m
                 desmarcarFavorito = {desmarcarFavorito}
                 marcarFavorito= {marcarFavorito}
                 favoritos = {favoritos}
+                manejarLike={manejarLike}
+                likes = {likes}
               />
             ))}
           </div>

@@ -11,6 +11,7 @@ function App() {
   const [categorias, setCategorias] = useState([]);
   const [destacados, setDestacados] = useState([]);
  const [favoritos, setFavoritos] = useState([])
+ const [likes, setLikes] = useState([]);
 
  useEffect(() => {
   // Carga los datos desde json-server
@@ -132,6 +133,22 @@ const crearNuevaCategoria = (nuevaCategoria) => {
     });
   };
 
+  
+
+  const manejarLike = (id) => {
+    setVideos(prevVideos =>
+      prevVideos.map(video =>
+        video.id === id ? { ...video, like: !video.like } : video
+      )
+    );
+    setLikes(prevLikes => {
+      if (prevLikes.includes(id)) {
+        return prevLikes.filter(videoId => videoId !== id);
+      } else {
+        return [...prevLikes, id];
+      }
+    });
+  };
 
   return (
     <>
@@ -151,6 +168,8 @@ const crearNuevaCategoria = (nuevaCategoria) => {
                 favoritos = {favoritos}
                 marcarFavorito = {marcarFavorito}
                  desmarcarFavorito = {desmarcarFavorito}
+                 manejarLike = {manejarLike}
+                 likes = {likes}
                 />
             
           } />
@@ -166,6 +185,7 @@ const crearNuevaCategoria = (nuevaCategoria) => {
         marcarFavorito = {marcarFavorito}
         desmarcarFavorito = {desmarcarFavorito}
         actualizarVideo = {actualizarVideo}
+        manejarLike = {manejarLike}
         />} />
  
         </Routes>

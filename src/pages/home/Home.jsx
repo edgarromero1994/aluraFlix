@@ -3,7 +3,7 @@ import Banner from '../../components/banner/Banner'
 import Categoria from '../../components/listavideos/Categoria'
 import EditarVideoModal from '../../components/editarvideomodal/EditarVideoModal';
 
-const Home = ({videos, eliminarVideo, actualizarVideo, categorias, marcarDestacado, desmarcarDestacado, destacados, favoritos, marcarFavorito, desmarcarFavorito }) => {
+const Home = ({videos, eliminarVideo, actualizarVideo, categorias, marcarDestacado, desmarcarDestacado, destacados, favoritos, marcarFavorito, desmarcarFavorito, manejarLike, likes}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [videoParaEditar, setVideoParaEditar] = useState(null);
 
@@ -36,7 +36,8 @@ const Home = ({videos, eliminarVideo, actualizarVideo, categorias, marcarDestaca
     marcarFavorito={marcarFavorito}
     desmarcarFavorito={desmarcarFavorito}
     favoritos={favoritos}
-
+    manejarLike= {manejarLike}
+    likes = {likes}
     />
     {modalVisible && <EditarVideoModal 
     cerrarModal={cerrarModal}
