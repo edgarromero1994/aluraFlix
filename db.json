@@ -20,7 +20,7 @@
       "video": "https://www.youtube.com/watch?v=GJfOSoaXk4s",
       "visualizacion": "100k Visualizaciones",
       "color": "#15289a",
-      "like": true,
+      "like": false,
       "favorito": true,
       "destacado": true
     },
@@ -80,7 +80,7 @@
       "video": "https://www.youtube.com/watch?v=vhwspfvI52k&t=13s",
       "visualizacion": "100k Visualizaciones",
       "color": "#148d49",
-      "like": true,
+      "like": false,
       "favorito": true,
       "destacado": false
     },
@@ -92,7 +92,7 @@
       "video": "https://www.youtube.com/watch?v=_-9grhDhxiU",
       "visualizacion": "100k Visualizaciones",
       "color": "#148d49",
-      "like": true,
+      "like": false,
       "favorito": true,
       "destacado": false
     },
@@ -104,7 +104,7 @@
       "video": "https://www.youtube.com/watch?v=6N3OkLCfK-0",
       "visualizacion": "100k Visualizaciones",
       "color": "#148d49",
-      "like": true,
+      "like": false,
       "favorito": false,
       "destacado": false
     }

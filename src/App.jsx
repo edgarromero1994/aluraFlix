@@ -14,7 +14,7 @@ function App() {
 
  useEffect(() => {
   // Carga los datos desde json-server
-  fetch('http://localhost:5000/videos')
+  fetch('https://backendalura.vercel.app/videos')
     .then(response => response.json())
     .then(data => {
       setVideos(data);
@@ -26,7 +26,7 @@ function App() {
 
 
 const regisrarNuevoVideo = (nuevoVideo) => {
-  fetch('http://localhost:5000/videos', {
+  fetch('https://backendalura.vercel.app/videos', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ const regisrarNuevoVideo = (nuevoVideo) => {
 };
 
 const eliminarVideo = (id) => {
-  fetch(`http://localhost:5000/videos/${id}`, {
+  fetch(`https://backendalura.vercel.app/videos/${id}`, {
     method: 'DELETE'
   })
   .then(() => setVideos(prevVideos => prevVideos.filter(video => video.id !== id)))
@@ -47,7 +47,7 @@ const eliminarVideo = (id) => {
 };
 
 const actualizarVideo = (videoActualizado) => {
-  fetch(`http://localhost:5000/videos/${videoActualizado.id}`, {
+  fetch(`https://backendalura.vercel.app/videos/${videoActualizado.id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ const actualizarVideo = (videoActualizado) => {
 
 const crearNuevaCategoria = (nuevaCategoria) => {
   if (!categorias.includes(nuevaCategoria.nombre)) {
-    fetch('http://localhost:5000/categorias', {
+    fetch('https://backendalura.vercel.app/categorias', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
