@@ -1,10 +1,24 @@
 .card {
     text-align: start;
-    background-color:#f9f9ff; /* Color de fondo similar a TikTok */
+    background-color:#f9f9ff;  
     position: relative;
-    color: #fff; /* Texto en blanco */
+    color: #fff;  
     overflow: hidden;
   }
+  
+  .card:hover::after {
+    content: 'Reproducir';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    pointer-events: none;  
+  }
+
   
   .card img {
     width: 100%;
