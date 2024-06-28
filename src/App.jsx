@@ -15,16 +15,21 @@ function App() {
  const [likes, setLikes] = useState([]);
 
  useEffect(() => {
-  // Carga los datos desde json-server en Vercel
   fetch('https://backendalura.vercel.app/videos')
     .then(response => response.json())
     .then(data => {
       setVideos(data);
-      const categoriasUnicas = Array.from(new Set(data.map(video => video.categoria)));
-      setCategorias(categoriasUnicas);
+      fetchCategorias();
     })
     .catch(error => console.error('Error fetching data:', error));
 }, []);
+
+const fetchCategorias = () => {
+  fetch('https://backendalura.vercel.app/categorias')
+    .then(response => response.json())
+    .then(data => setCategorias(data.map(categoria => categoria.nombre)))
+    .catch(error => console.error('Error fetching categories:', error));
+};
 
 
 const regisrarNuevoVideo = (nuevoVideo) => {
