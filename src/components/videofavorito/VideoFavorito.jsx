@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ReactPlayer from 'react-player';
  
 
-const VideoFavorito = ({video, marcarFavorito, desmarcarFavorito, actualizarVideo, manejarLike }) => {
+const VideoFavorito = ({video, marcarFavorito, desmarcarFavorito, manejarLike }) => {
   
   const [playing, setPlaying] = useState(false);
   const [currentPlayingId, setCurrentPlayingId] = useState(null); 
@@ -48,7 +48,7 @@ const VideoFavorito = ({video, marcarFavorito, desmarcarFavorito, actualizarVide
         height="100%"
         controls={true}
         playing={playing}
-        onEnded={() => setPlaying(false)} // Pausa el video al finalizar la reproducción
+        onEnded={() => setPlaying(false)}  
       />
     )}
     <div className="details">

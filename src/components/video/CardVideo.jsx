@@ -81,7 +81,7 @@ const CardVideo = ({
           height="100%"
           controls={true}
           playing={playing}
-          onEnded={() => setPlaying(false)} // Pausa el video al finalizar la reproducción
+          onEnded={() => setPlaying(false)} 
         />
       )}
       <div className="details">

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Banner from '../../components/banner/Banner'
 import Categoria from '../../components/listavideos/Categoria'
 import EditarVideoModal from '../../components/editarvideomodal/EditarVideoModal';
+import Experto from '../../components/expertos/Experto';
 
 const Home = ({videos, eliminarVideo, actualizarVideo, categorias, marcarDestacado, desmarcarDestacado, destacados, favoritos, marcarFavorito, desmarcarFavorito, manejarLike, likes}) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -14,7 +15,7 @@ const Home = ({videos, eliminarVideo, actualizarVideo, categorias, marcarDestaca
 
   const cerrarModal = () => {
     setModalVisible(false);
-    setVideoParaEditar(null); // Limpiar el video seleccionado después de cerrar el modal
+    setVideoParaEditar(null);  
   };
 
   return (
@@ -42,11 +43,13 @@ const Home = ({videos, eliminarVideo, actualizarVideo, categorias, marcarDestaca
     {modalVisible && <EditarVideoModal 
     cerrarModal={cerrarModal}
     
-    video={videoParaEditar} // Pasa el video seleccionado al modal de edición
+    video={videoParaEditar} 
      actualizarVideo={actualizarVideo} 
      categorias={categorias}
     
     />}
+
+      <Experto/>
     </>
   )
 }

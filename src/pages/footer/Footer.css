@@ -1,0 +1,135 @@
+footer {
+    padding: 8vw;
+    background-color: #101c32;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  footer .footer-col {
+    padding-bottom: 40px;
+  }
+  
+  footer h3 {
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 20px;
+  }
+  
+  footer li {
+    list-style: none;
+    color: #7b838a;
+    padding: 10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  footer li:hover {
+    color: #fff;
+  }
+  
+  footer p {
+    color: #7b838a;
+  }
+  
+  footer .subscribe {
+    margin-top: 20px;
+  }
+  
+  footer input {
+    width: 220px;
+    padding: 15px 12px;
+    background-color: #334f6c;
+    border: none;
+    outline: none;
+    color: #fff;
+  }
+  
+  footer .subscribe a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 15px 12px;
+    background-color: #fff;
+    font-weight: 600;
+    color: #101c32;
+  }
+  
+  footer .subscribe a.yellow {
+    color: #101c32;
+    background: #FDC93B;
+    transition: 0.3s ease;
+  }
+  
+  footer .subscribe a.yellow:hover {
+    color: rgb(21, 21, 100);
+    background-color: #fff;
+  }
+  
+  footer .cpyright {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  footer .cpyright p {
+    color: #fff;
+  }
+  
+  footer .cpyright .pro-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  footer .cpyright .pro-links i {
+    background-color: #5f7185;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+  }
+  
+  footer .cpyright .pro-links i:hover {
+    background-color: #FDC93B;
+    color: #2c2c2c;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    footer .footer-col {
+      width: 100%;
+    }
+  
+    footer .cpyright {
+      flex-direction: column;
+    }
+  
+    footer .cpyright .pro-links {
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    footer input {
+      width: 100%;
+    }
+  
+    footer .subscribe a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+  }

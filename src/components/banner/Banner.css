@@ -9,8 +9,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  text-align: left; /* Alinea el texto a la izquierda */
-  padding: 0 40px; /* Añade padding horizontal */
+  text-align: left; 
+  padding: 0 40px;  
 }
 
 .text-container {
@@ -20,13 +20,13 @@
 .image-container {
   max-width: 50%;
   display: flex;
-  justify-content: flex-end; /* Alinea la imagen a la derecha */
+  justify-content: flex-end; 
 }
 
 .image-container img {
   width: 100%;
   height: auto;
-  max-width: 500px; /* Establece un tamaño máximo para la imagen */
+  max-width: 500px; 
 }
 
 #home h2 {
@@ -107,13 +107,13 @@
   flex: 0 0 auto;
 }
 
-/* Media queries para pantallas pequeñas */
+ 
 @media (max-width: 768px) {
   #home {
     padding: 80px 20px 0;
-    height: auto; /* Permite que la altura se ajuste automáticamente */
-    flex-direction: column-reverse; /* Cambia el orden para que el texto y botones estén encima en móvil */
-    text-align: center; /* Centra el texto en pantallas pequeñas */
+    height: auto;  
+    flex-direction: column-reverse;  
+    text-align: center; 
   }
 
   .text-container, .image-container {
@@ -146,7 +146,7 @@
 
   .image-container img {
     max-width: 200px;
-    margin-bottom: 20px; /* Ajusta el tamaño máximo para pantallas muy pequeñas */
+    margin-bottom: 20px; 
   }
 
   #home h2 {

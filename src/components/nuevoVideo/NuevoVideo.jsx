@@ -13,7 +13,7 @@ const NuevoVideo = ({ regisrarNuevoVideo, categorias, crearNuevaCategoria }) => 
   const [like] = useState(false);
   const [favorito] = useState(false);
   
-  //para crear un nuevo categoria 
+ 
   const [nombre, actualizarNombre] = useState("")
   const [color, actualizarColor] = useState("#000000")
 
@@ -21,7 +21,7 @@ const NuevoVideo = ({ regisrarNuevoVideo, categorias, crearNuevaCategoria }) => 
     e.preventDefault();
 
     if (titulo && categoria && imagen && video) {
-      // Construir el objeto con los datos del formulario
+       
       const nuevoVideo = {
         titulo,
         categoria,
@@ -34,21 +34,21 @@ const NuevoVideo = ({ regisrarNuevoVideo, categorias, crearNuevaCategoria }) => 
 
       regisrarNuevoVideo(nuevoVideo);
 
-      // Mostrar mensaje de éxito
+   
       Swal.fire({
         icon: 'success',
         title: '¡Video registrado!',
         text: 'El video se ha registrado correctamente.',
         confirmButtonText: 'OK'
       }).then(() => {
-        // Opcional: limpiar el formulario después de registrar el video
+    
         setTitulo('');
         setCategoria('');
         setImagen('');
         setVideo('');
       });
     } else {
-      // Mostrar mensaje de error
+      
       Swal.fire({
         icon: 'error',
         title: 'Error',
@@ -61,14 +61,13 @@ const NuevoVideo = ({ regisrarNuevoVideo, categorias, crearNuevaCategoria }) => 
   const manejarEnvioCategoria = (e) => {
     e.preventDefault();
 
-    if (nombre && color) {
-      // Construir objeto de nueva categoría
+    if (nombre && color) { 
       const nuevaCategoria = {
         nombre,
         color
       };
 
-      // Llamar a la función para crear nueva categoría
+     
       crearNuevaCategoria(nuevaCategoria);
 
       Swal.fire({

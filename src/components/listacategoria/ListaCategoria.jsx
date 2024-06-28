@@ -3,7 +3,7 @@ import "./ListaCategoria.css";
 
 const ListaCategoria = ({ categorias, valor, actualizarValor }) => {
   if (!categorias) {
-    categorias = []; // Inicializar como un array vacío si es undefined o null
+    categorias = []; 
   }
 
   return (

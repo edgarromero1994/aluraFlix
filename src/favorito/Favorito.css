@@ -20,7 +20,7 @@
     margin-top: 30px;
 }
 
-/* Pantallas grandes */
+ 
 
 @media (max-width: 480px) { 
     .video-list .video-favotire-title {

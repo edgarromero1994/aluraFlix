@@ -91,7 +91,7 @@ nav img {
   color: #FDC93B;
 }
 
-/* Media Queries */
+
 @media (max-width: 768px) {
   .nav-grande {
     display: none;

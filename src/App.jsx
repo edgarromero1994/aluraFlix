@@ -4,6 +4,7 @@ import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NuevoVideo from './components/nuevoVideo/NuevoVideo';
 import Favorito from './favorito/Favorito';
+import Footer from './pages/footer/Footer';
  
  
 function App() {
@@ -14,7 +15,7 @@ function App() {
  const [likes, setLikes] = useState([]);
 
  useEffect(() => {
-  // Carga los datos desde json-server
+  // Carga los datos desde json-server en Vercel
   fetch('https://backendalura.vercel.app/videos')
     .then(response => response.json())
     .then(data => {
@@ -189,6 +190,7 @@ const crearNuevaCategoria = (nuevaCategoria) => {
         />} />
  
         </Routes>
+        <Footer/>
       </Router>
     </>
   );
